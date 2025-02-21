@@ -1,10 +1,9 @@
-def make_statement(statement, decoration, lines):
+def decorate_text(boring_txt, decoration, lines):
     """Creates headings (3 lines), subheadings (2 lines) and
-    emphasised text / mini-headings (1 line).  Only use emoji for
-    single line statements"""
+    emphasised text / mini-headings (1 line). Emojis are recomended only for emphasised text"""
 
-    middle = f"{decoration * 3} {statement} {decoration * 3}"
-    top_bottom = decoration * len(middle)
+    middle = f"{decoration * 2} {boring_txt} {decoration * 2}"
+    top_bottom = decoration * len(boring_txt)
 
     if lines == 1:
         print(middle)
@@ -13,13 +12,13 @@ def make_statement(statement, decoration, lines):
         print(top_bottom)
 
     else:
-        print(top_bottom)
+        print(top_bottom * lines / 2)
         print(middle)
-        print(top_bottom)
+        print(top_bottom * lines / 2)
 
 # Main Routine goes here
-make_statement("Programming is Fun!", "=", 3)
+decorate_text("a big title!", "⭐", 6)
 print()
-make_statement("Programming is Still Fun!", "*", 2)
+decorate_text("12345671234567", "⭐", 2)
 print()
-make_statement("Emoji in Action", "🐍", 1)
+decorate_text("look at me!", "⭐", 1)
