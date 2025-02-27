@@ -17,7 +17,7 @@ def decorate_text(boring_txt, decoration, lines):
         print(round(blines / 2) * top_bottom)
 
 # Main Routine goes here
-decorate_text("a big title!", "⭐", 6)
+decorate_text("12345671234567", "⭐", 3)
 print()
 decorate_text("12345671234567", "⭐", 2)
 print()
