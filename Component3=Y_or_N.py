@@ -11,7 +11,7 @@ def Y_or_N(question):
             print("Please enter 'yes', 'y', 'no' or 'n'. ")
 
 # Main
-george = input('Do you like what it doeas to your blemis? ')
+george = input('Do you like ice cream? ')
 bee = Y_or_N(george)
 (print)
 if bee == 'yes':
