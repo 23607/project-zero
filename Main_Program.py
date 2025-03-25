@@ -20,11 +20,9 @@ def Y_or_N(question):
     
 def no_blank_fields_pls (field):
     '''If the user does not fill a field, this function will detect it and ask them to do it'''
-    bfield = field.isalpha()
-    while bfield == '' or bfield == False:
-        print(">Emm, I think you should answer... with words :D.<")
+    while field == '' or field.isalpha() == False:
+        print(">Emm, I think you should answer with words.<")
         field = input("Answer again here please: ")
-        bfield = field.isalpha()
 
 #Main code
 print("Hello there! It's so very nice to meet you! Welcome to the world of Pokémon!")
@@ -55,4 +53,6 @@ while name_correct == False:
     elif Y_or_N == 'no':
         time.sleep(1)
         print("Oh, ok.")
+print("A fine name that is")
+
             
