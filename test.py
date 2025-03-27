@@ -4,11 +4,8 @@ import time
 def no_blank_fields_pls (field):
     '''If the user does not fill a field, this function will detect it and ask them to do it'''
     while field == '' or field.isalpha() == False:
-        print(">Emm, I think you should answer with words.<")
-        field = input("Answer again here please: ")
-        if field == 'stop':
-            ('Alright, I will stop')
-            exit()
+        print(">Emm, try answering with words -only-.<")
+        time.sleep(0.5)
 
 # functions
 def Y_or_N(question):
@@ -19,27 +16,27 @@ def Y_or_N(question):
             return 'yes'
         elif questionb == 'no' or questionb == 'n':
             return 'no'
-        elif questionb == 'stop':
-            print('Alright, I will stop')
-            exit()
         else:
-            print("Please enter 'yes', 'y', 'no' or 'n'. ")
-            question = input('answer again here, please: ')
-            questionb = question.lower()
+            print(">Please enter 'yes', 'y', 'no' or 'n'.<")
+            time.sleep(0.5)
+
 #Main
 while True:
+    time.sleep(0.5)
     pname = input("Tell me, what is your name? ")
     if pname == 'stop':
         exit()
-    no_blank_fields_pls(pname)
+    elif no_blank_fields_pls(pname) == True:
 #"pname" is the player's name. This will be used later on.
-    time.sleep(0.5)
-    confirm_name = input(f"So, Ok... you're {pname}?")
-    (print)
-
-    if Y_or_N(confirm_name) == 'yes':
-        break
-    elif Y_or_N(confirm_name) == 'no':
-        time.sleep(1)
-        print("Oh, ok.")
+        time.sleep(0.5)
+        confirm_name = input(f"Ok, so... you're {pname}? ")
+        if Y_or_N(confirm_name) == 'yes':
+            break
+        elif Y_or_N(confirm_name) == 'no':
+            time.sleep(1)
+            print("Oh, well in that case...")
+        else:
+            print("Oh, pardon me, I didn't get what you said.")
+    else:
+        print("Oh, pardon me, I didn't get what you said.")
 print(f'Hello, {pname}')
