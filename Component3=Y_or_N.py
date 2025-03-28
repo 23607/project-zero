@@ -1,3 +1,12 @@
+import time
+
+#Functions
+def no_blank_fields_pls (field):
+    '''If the user does not fill a field, this function will detect it and ask them to do it'''
+    while field == '' or field.isalpha() == False:
+        print(">Emm, try answering with words -only-.<")
+        time.sleep(0.5)
+
 # functions
 def Y_or_N(question):
     """Checks that users enter yes / y or no / n to a question"""
@@ -7,13 +16,10 @@ def Y_or_N(question):
             return 'yes'
         elif questionb == 'no' or questionb == 'n':
             return 'no'
-        elif questionb == 'stop':
-            print('The program has been stopped')
-            break
         else:
-            print("Please enter 'yes', 'y', 'no' or 'n'. ")
-            question = input('answer again here, please: ')
-            questionb = question.lower()
+            print(">Please enter 'yes', 'y', 'no' or 'n'.<")
+            time.sleep(0.5)
+
 
 # Main
 george = input('Do you like ice cream? ')
